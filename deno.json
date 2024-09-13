@@ -1,5 +1,12 @@
 {
   "tasks": {
-    "build": "deno run build.ts"
+    "build": "deno run --allow-run --allow-read --allow-net --allow-write build.ts"
+  },
+  "imports": {
+    "@std/fs": "jsr:@std/fs@^1.0.3",
+    "@std/path": "jsr:@std/path@^1.0.6",
+    "@std/semver": "jsr:@std/semver@^1.0.3",
+    "downstream": "https://deno.land/x/downstream@0.3.3/mod.ts",
+    "progress": "jsr:@deno-library/progress@^1.4.9"
   }
 }
