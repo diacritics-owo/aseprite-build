@@ -33,6 +33,9 @@ switch (platform) {
       case 'arm64':
       case 'x64':
         info(`detected supported platform ${platform}-${architecture}`);
+        break;
+      default:
+        fatal(`detected unsupported platform ${platform}-${architecture}`);
     }
     break;
   default:
@@ -146,3 +149,4 @@ if (!ninjaStatus.success) {
 }
 
 success(`successfully built aseprite to ${build}!`);
+info(`the directory ${output} is large—you likely want to delete it once you get the artifacts`);
